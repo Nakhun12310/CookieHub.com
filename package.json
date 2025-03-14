@@ -6,6 +6,6 @@
     "start": "node script.js"
   },
   "dependencies": {
-    // your dependencies
+    // your dependencies here
   }
 }
