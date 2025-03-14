@@ -1,4 +1,7 @@
 export default function handler(req, res) {
-    res.setHeader("Content-Type", "text/plain");
-    res.send(`print("Cookie Scripts Loaded!")\ngame.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100`);
+  if (req.method === 'GET') {
+    res.status(200).json({ message: 'Script executed successfully' });
+  } else {
+    res.status(405).json({ error: 'Method Not Allowed' });
+  }
 }
